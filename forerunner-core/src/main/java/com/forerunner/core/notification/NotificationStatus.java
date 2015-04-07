@@ -1,9 +1,9 @@
 package com.forerunner.core.notification;
 
-import com.forerunner.persistent.entity.FRDictionary;
+import com.forerunner.persistent.entity.Dictionary;
 
 public interface NotificationStatus {
-	FRDictionary RECEIVED = new FRDictionary("RECEIVED", 0);
-	FRDictionary NOT_RECEIVED = new FRDictionary("NOT_RECEIVED", 1);
-	FRDictionary CANCEL = new FRDictionary("CANCEL", -1);
+	Dictionary<String, Integer> RECEIVED = Dictionary.def("RECEIVED", 0);
+	Dictionary<String, Integer> NOT_RECEIVED = Dictionary.def("NOT_RECEIVED", 1);
+	Dictionary<String, Integer> CANCEL = Dictionary.def("CANCEL", -1);
 }

@@ -15,7 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
 import com.forerunner.persistent.PersistentConstants;
-import com.forerunner.persistent.entity.FRTraceEntity;
+import com.forerunner.persistent.entity.Trace;
 import com.forerunner.um.UMContext;
 import com.forerunner.utils.DateUtils;
 import com.google.common.collect.Lists;
@@ -131,7 +131,7 @@ public class FREntityInterceptor extends EmptyInterceptor implements Interceptor
 	 * 更新所有基于BaseEntity的实体
 	 */
 	private void updateBaseEntity(Object entity, Object[] currentState, String[] propertyNames) {
-		if (entity instanceof FRTraceEntity) {
+		if (entity instanceof Trace) {
 			setValue(currentState, propertyNames, "updateBy", UMContext.getCurrentContext().getCurrentUser());
 			setValue(currentState, propertyNames, "updateOn", DateUtils.today(Date.class));
 			if (getValue(currentState, propertyNames, "createBy") == null) {

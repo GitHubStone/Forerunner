@@ -1,8 +1,8 @@
 package com.forerunner.core.notification;
 
-import com.forerunner.persistent.entity.FRBaseEntity;
+import com.forerunner.persistent.entity.BaseEntity;
 
-public class Notification extends FRBaseEntity {
+public class Notification extends BaseEntity {
 	private static final long serialVersionUID = -4660448257767739427L;
 
 	private Long id;

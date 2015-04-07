@@ -1,8 +1,8 @@
 package com.forerunner.um;
 
-import com.forerunner.persistent.entity.FRTraceEntity;
+import com.forerunner.persistent.entity.Trace;
 
-public class User extends FRTraceEntity {
+public class User extends Trace {
 	private static final long serialVersionUID = -1722409371141876981L;
 
 	private Long id;
